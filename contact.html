@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact | written-art®</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/c8fc247de9.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="contact">
     <section>
         <nav class="nav__bar">
             
@@ -15,8 +16,35 @@
             <a class="nav__link">menu +</a>
     
         </nav>
+        <nav class="hidden__navbar">
+            <ul class="hidden__nav--ul">
+              <li class="hidden__nav--li">
+                <a href="./index.html" class="hidden__nav--link nav__link">home</a>
+              </li>
+              <li class="hidden__nav--li">
+                <a href="./index.html" class="hidden__nav--link nav__link">rates</a>
+              </li>
+              <li class="hidden__nav--li">
+                <a href="./index.html" class="hidden__nav--link nav__link">help</a>
+              </li>
+              <li class="hidden__nav--li">
+                <a href="./index.html" class="hidden__nav--link nav__link">legal</a>
+              </li>
+            </ul>
+          </nav>
 
-
+          <div class="contact__form--container">
+            <h1 class="contact__form--title">inquire about your project:</h1>
+            <label for="" class="contact__form--label">name</label>
+            <input type="text" class="contact__form--input">
+            <label for="" class="contact__form--label">email</label>
+            <input type="email" class="contact__form--input">
+            <label for="" class="contact__form--label">what do you do?</label>
+            <input type="text" class="contact__form--input">
+            <label for="" class="contact__form--label">anything else we should know?</label>
+            <textarea type="textarea" rows="8" class="contact__form--input"></textarea>
+            <button type="submit" class="contact__form--button">send<i class="fa-solid fa-right-from-bracket out"></i></button>
+          </div>
     </section>
 </body>
 </html>

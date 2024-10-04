@@ -331,8 +331,8 @@ a {
     margin: 15px;
 }
 
-.portfolio__item:hover .portfolio__item--img {
-    transform: translateY(-12px) translateX(8px) rotate(12deg); 
+.portfolio__item--img:hover {
+    transform: translateY(-12px) translateX(12px) rotate(12deg); 
     cursor: alias;
 }
 
@@ -350,4 +350,74 @@ a {
 .up-out-arrow {
     font-size: 12px;
     margin-left: 8px;
+}
+
+/* CONTACT */
+
+#contact {
+    background: linear-gradient(90deg, rgb(222, 255, 178), rgb(240, 188, 0)); 
+}
+
+.contact__form--container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 444px;
+    margin: 0 auto;
+    margin-top: 80px;
+    animation: 1.8s ease backwards fade-up;
+}
+
+@keyframes fade-up {
+    0%{
+        transform: translateY(80px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.contact__form--title {
+    color: #fff;
+    margin-left: 12px;
+}
+
+.contact__form--label {
+    font-family: "Poppins", sans-serif;
+    margin-left: 12px;
+    padding: 12px 0;
+}
+
+.contact__form--input {
+    border-radius: 24px;
+    border: none;
+    padding: 12px 24px;
+}
+
+.contact__form--button {
+    margin: 18px 0;
+    border-radius: 24px;
+    border: none;
+    padding: 12px 0 12px 30px;
+    background: linear-gradient(90deg, rgb(0, 140, 140), rgb(0, 80, 80));
+    color: white;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    transition: all 400ms ease;
+}
+
+.contact__form--button:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    font-size: 21px;
+}
+
+.out {
+    margin-left: 12px;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.contact__form--button:hover .out {
+    opacity: 1;
 }
