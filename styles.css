@@ -210,6 +210,20 @@ a {
   padding: 15px;
   transition: all 400ms ease;
   max-width: 525px;
+  animation: 1.5s ease-out backwards fade-up;
+}
+
+@keyframes fade-up {
+    0%{
+        transform: translateY(80px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.about__details--title {
+    text-decoration: underline;
 }
 
 .about__details--subtitle {
@@ -223,6 +237,7 @@ a {
 
 .about__details--container:hover .about__details--title {
   color: rgba(0, 198, 192);
+  text-decoration: none;
 }
 
 .about__details--container:hover {
@@ -240,6 +255,7 @@ a {
   background-size: 400% 400%;
   z-index: 1;
   box-shadow: 0 0 16px rgba(255, 255, 255, 0.7);
+  transform: translateY(40px);
 }
 
 @keyframes animate-background {
@@ -252,4 +268,86 @@ a {
   100% {
     background-position: 0 50%;
   }
+}
+
+/* SERVCES */
+
+#services {
+    background: linear-gradient(90deg, rgb(30, 64, 255), rgb(68, 51, 255));
+}
+
+.services__container {
+    padding-bottom: 30px;
+}
+
+.services__details--bottom {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.contact-us__button {
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgb(0, 140, 140), rgb(0, 100, 100));
+    color: #fff;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+.arrow {
+    font-size: 18px;
+    margin-left: 5px;
+    opacity: 0;
+    transition: all 800ms ease;
+    transform: translateY(1px);
+}
+
+.contact-us__button:hover .arrow {
+    opacity: 1;
+}
+
+/* GOALS */
+
+#goals {
+    background: linear-gradient(90deg, rgb(68, 51, 255), rgb(0, 140, 140));   
+}
+
+/* PORTFOLIO */
+
+#portfolio {
+    background: linear-gradient(90deg, rgb(0, 120, 140), rgb(0, 240, 240));   
+}
+
+.portfolio__details--container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio__details--container:hover {
+    font-size: 16px;
+}
+
+.portfolio__item {
+    width: 43%;
+    margin: 15px;
+}
+
+.portfolio__item:hover .portfolio__item--img {
+    transform: translateY(-12px) translateX(8px) rotate(12deg); 
+    cursor: alias;
+}
+
+.portfolio__item--img {
+    width: 100%;
+    max-width: 270px;
+    border-radius: 27px;
+    transition: all 300ms ease;
+}
+
+.portfolio__item--link {
+    color: #fff;
+}
+
+.up-out-arrow {
+    font-size: 12px;
+    margin-left: 8px;
 }
