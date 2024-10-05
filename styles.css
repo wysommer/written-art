@@ -2,11 +2,15 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  /* margin: 0; */
 }
 
 h1,
-h3 {
+h2, 
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins", sans-serif;
 }
 
@@ -129,20 +133,23 @@ a {
 .rectangle:hover .logo {
   bottom: 50%;
   right: 40%;
+  animation: 7s ease-in-out infinite animate-logo;
 }
 
 .logo {
   position: absolute;
   bottom: 0;
   right: 4px;
-  color: yellow;
   font-weight: 700;
   transition: all 2.2s ease;
 }
 
 .logo:hover {
-  cursor: pointer;
-  animation: 7s ease-in-out infinite animate-logo;
+    cursor: pointer;
+}
+
+.logo__link {
+    color: yellow;
 }
 
 @keyframes animate-logo {
@@ -226,12 +233,8 @@ a {
     text-decoration: underline;
 }
 
-.about__details--subtitle {
-  padding: 12px 0;
-}
-
 .about__details--description {
-  padding: 12px 0;
+  padding: 0;
   text-align: justify;
 }
 
@@ -270,7 +273,30 @@ a {
   }
 }
 
+.next__button {
+    font-size: 21px;
+    color: #fff;
+    padding: 0;
+}
+
+.arrow {
+    font-size: 18px;
+    margin-left: 5px;
+    opacity: 0;
+    transition: all 800ms ease;
+    transform: translateY(1px);
+}
+
+.next__button:hover .arrow {
+    opacity: 1;
+}
+
 /* SERVCES */
+
+.next__button--services {
+    padding: 45px 0 0 0;
+    display: block;
+}
 
 #services {
     background: linear-gradient(90deg, rgb(30, 64, 255), rgb(68, 51, 255));
@@ -291,14 +317,6 @@ a {
     color: #fff;
     margin-bottom: 30px;
     padding-left: 30px;
-}
-
-.arrow {
-    font-size: 18px;
-    margin-left: 5px;
-    opacity: 0;
-    transition: all 800ms ease;
-    transform: translateY(1px);
 }
 
 .contact-us__button:hover .arrow {
@@ -327,8 +345,10 @@ a {
 }
 
 .portfolio__item {
-    width: 43%;
-    margin: 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .portfolio__item--img:hover {
@@ -338,11 +358,14 @@ a {
 
 .portfolio__item--img {
     width: 100%;
-    max-width: 270px;
-    border-radius: 27px;
+    border-radius: 12px;
     transition: all 300ms ease;
 }
 
+.portfolio__item--title {
+    padding-top: 0;
+    margin-top: 0;
+}
 .portfolio__item--link {
     color: #fff;
 }
@@ -420,4 +443,128 @@ a {
 
 .contact__form--button:hover .out {
     opacity: 1;
+}
+
+/* RATES */
+
+#rates {
+    background: linear-gradient(90deg, rgb(0, 255, 255), rgb(255, 255, 0));
+}
+
+.rates__container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: 2s ease backwards fade-up;
+}
+
+@keyframes fade-up {
+    0%{
+        transform: translateY(80px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.rates__item {
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 40px;
+    margin: 80px;
+    border-radius: 80px;
+    background: linear-gradient(33deg, rgba(255, 255, 255, 0.3), rgba(0, 140, 140, 0.1));
+    transition: all 400ms ease;
+}
+
+.rates__item:hover {
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1.1);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(0, 80, 80, 0.1));
+}
+
+.rates__item--subtitle {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+.rates__item--price {
+    padding: 18px;
+}
+
+.rates__item--cta {
+    display: block;
+    width: 45%;
+    max-width: 144px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, rgba(0, 240, 240, 0.3), rgba(0, 100, 100, 0.1));
+    border-radius: 30px;
+    transition: all 400ms ease;
+}
+
+.rates__item--cta:hover {
+    font-size: 21px;
+    color: #fff;
+}
+
+
+/* HELP */
+
+#help {
+    background: linear-gradient(90deg, rgba(0, 240, 240, 0.3), rgba(192, 66, 255, 0.826));
+}
+
+.faq__container {
+    width: 100%;
+    max-width: 555px;
+    margin: 0 auto;
+    padding-top: 80px;
+    
+}
+
+.faq__page-title {
+    color: #fff;
+    margin: 0 0 4px 45px;
+}
+
+.customer__support-number {
+    padding: 0 0 24px 0;
+}
+
+.faq__list-li {
+    list-style: none;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.x {
+    margin-left: 12px;
+    transform: rotate(45deg);
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+    transition: all 400ms ease;
+}
+
+.copyright:hover {
+    font-weight: 800;
+    font-size: 18px;
+    cursor: cell;
+    color: rgb(0, 100, 100);
+    background: linear-gradient(90deg, rgba(255, 251, 0, 0.809), rgba(0, 255, 255, 1));
+    border-radius: 30px;
+    box-shadow: 0 0 14px #fff;
+    transform: translateY(-12px);
 }
