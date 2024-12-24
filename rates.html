@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rates | written-art®</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body id="rates">
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/c8fc247de9.js" crossorigin="anonymous"></script>
+  </head>
+  <body id="rates">
     <section>
-        <nav class="nav__bar">
-            
-            <a href="./about.html" class="nav__link">about</a>
-            <a href="./contact.html" class="nav__link">contact us</a>
-            <a class="nav__link">menu +</a>
-    
-        </nav>
-        <nav class="hidden__navbar">
-            <ul class="hidden__nav--ul">
-              <li class="hidden__nav--li">
-                <a href="./index.html" class="hidden__nav--link nav__link">home</a>
-              </li>
-              <li class="hidden__nav--li">
-                <a href="./rates.html" class="hidden__nav--link nav__link nav__link--active">rates</a>
-              </li>
-              <li class="hidden__nav--li">
-                <a href="./help.html" class="hidden__nav--link nav__link">help</a>
-              </li>
-              <li class="hidden__nav--li">
-                <a href="./index.html" class="hidden__nav--link nav__link">legal</a>
-              </li>
-            </ul>
-          </nav>
+      <nav class="nav__bar">
+        <a href="./about.html" class="nav__link">about</a>
+        <a href="./sign-up.html" class="nav__link">sign up</a>
+        <a
+          class="nav__link nav__link--menu open__menu--btn"
+          onclick="openMenu()"
+          >menu</a
+        >
+        <a
+          class="nav__link nav__link--menu close__menu--btn"
+          onclick="closeMenu()"
+          >menu</a
+        >
+        <i class="fa-solid fa-plus"></i>
+      </nav>
+      <nav class="hidden__navbar">
+        <ul class="hidden__nav--ul">
+          <li class="hidden__nav--li">
+            <a href="./index.html" class="hidden__nav--link nav__link">home</a>
+          </li>
+          <li class="hidden__nav--li">
+            <a
+              href="./rates.html"
+              class="hidden__nav--link nav__link nav__link--active"
+              >rates</a
+            >
+          </li>
+          <li class="hidden__nav--li">
+            <a href="./faq.html" class="hidden__nav--link nav__link">FAQs</a>
+          </li>
+          <li class="hidden__nav--li">
+            <a href="./index.html" class="hidden__nav--link nav__link">legal</a>
+          </li>
+        </ul>
+      </nav>
 
-          <div class="rates__container">
-
-            <div class="rates__item">
-              <h1 class="rates__item--title">
-                one page website
-              </h1>
-              <h6 class="rates__item--subtitle">
-                a one-page website with multiple sections.
-              </h6>
-              <h3 class="rates__item--price">
-                $1,500
-              </h3>
-              <a href="./contact.html" class="rates__item--cta">inquire</a>
-            </div>
-            <div class="rates__item">
-              <h1 class="rates__item--title">
-                multiple page website
-              </h1>
-              <h6 class="rates__item--subtitle">
-                a website with multiple separate pages.
-              </h6>
-              <h3 class="rates__item--price">
-                $4,000
-              </h3>
-              <a href="./contact.html" class="rates__item--cta">inquire</a>
-            </div>
+      <div class="rates__container">
+        <div class="rates__item">
+          <h1 class="rates__item--title">website design & development</h1>
+          <h6 class="rates__item--subtitle">
+            this is the initial cost of the website
+          </h6>
+          <h3 class="rates__item--price">$599</h3>
+          <a href="./sign-up.html" class="rates__item--cta">sign up</a>
+        </div>
+        <h1 class="rates__item--title monthly__title">website updates & support</h1>
+        <div class="rates__monthly--prices">
+          <div class="rates__item monthly__item">
+            <h2 class="rates__monthly--title">
+              basic
+            </h2>
+            <p class="rates__monthly--details">
+              • one update per 2 months
+              <br>
+              • basic support 
+            </p>
+            <h3 class="rates__item--price">$99/month</h3>
+            <a href="./sign-up.html" class="rates__item--cta">sign up</a>
           </div>
+          <div class="rates__item monthly__item">
+            <h2 class="rates__monthly--title">
+              priority
+            </h2>
+            <p class="rates__monthly--details">
+              • one update per month
+              <br>
+              • priority support 
+            </p>
+            <h3 class="rates__item--price">$299/month</h3>
+            <a href="./sign-up.html" class="rates__item--cta">sign up</a>
+          </div>
+          <div class="rates__item monthly__item">
+            <h2 class="rates__monthly--title">
+              dedicated
+            </h2>
+            <p class="rates__monthly--details">
+              • two updates per month
+              <br>
+              • dedicated support 
+            </p>
+            <h3 class="rates__item--price">$499/month</h3>
+            <a href="./sign-up.html" class="rates__item--cta">sign up</a>
+          </div>
+        </div>
+      </div>
     </section>
     <footer>
-      <p class="copyright">© 2024 written-art®</p>
+      <p class="copyright copyright__long">© 2024 written-art®</p>
     </footer>
-</body>
+  </body>
 </html>

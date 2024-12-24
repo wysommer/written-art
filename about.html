@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>about | written-art®</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js"></script>
     <script src="https://kit.fontawesome.com/c8fc247de9.js" crossorigin="anonymous"></script>
   </head>
   <body id="about">
     <section>
       <nav class="nav__bar">
         <a href="./about.html" class="nav__link nav__link--active">about</a>
-        <a href="./contact.html" class="nav__link">contact us</a>
-        <a class="nav__link">menu +</a>
+        <a href="./sign-up.html" class="nav__link">sign up</a>
+        <a class="nav__link nav__link--menu open__menu--btn" onclick="openMenu()">menu</a>
+        <a class="nav__link nav__link--menu close__menu--btn" onclick="closeMenu()">menu</a>
+        <i class="fa-solid fa-plus"></i>
       </nav>
       <nav class="hidden__navbar">
         <ul class="hidden__nav--ul">
@@ -23,7 +26,7 @@
                 <a href="./rates.html" class="hidden__nav--link nav__link">rates</a>
             </li>
             <li class="hidden__nav--li">
-                <a href="./help.html" class="hidden__nav--link nav__link">help</a>
+                <a href="./faq.html" class="hidden__nav--link nav__link">FAQs</a>
             </li>
             <li class="hidden__nav--li">
                 <a href="./index.html" class="hidden__nav--link nav__link">legal</a>
@@ -73,7 +76,7 @@
       </div>
     </section>
     <footer>
-      <p class="copyright">© 2024 written-art®</p>
+      <p class="copyright copyright__long">© 2024 written-art®</p>
     </footer>
   </body>
 </html>
